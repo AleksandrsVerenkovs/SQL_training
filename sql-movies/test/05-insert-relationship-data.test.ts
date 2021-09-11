@@ -179,8 +179,8 @@ describe("Insert Relationship Data", () => {
         }
       }
 
-      const count = await db.selectSingleRow(selectCount(DIRECTORS));
-      expect(count.c).toBe(2499); //3340
+      const count = await db.selectSingleRow(selectCount(MOVIE_DIRECTORS));
+      expect(count.c).toBe(3340); //3340
 
       const movie = await db.selectSingleRow(selectMovie("tt2488496"));
       expect(movie.original_title).toBe("Star Wars: The Force Awakens");
